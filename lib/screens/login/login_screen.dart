@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:give_me_gifs/screens/home/gif_page.dart';
 import 'package:give_me_gifs/screens/login/widgets/animation_button.dart';
 import 'package:give_me_gifs/screens/login/widgets/form_container.dart';
 import 'package:give_me_gifs/screens/login/widgets/signup_button.dart';
@@ -21,6 +22,12 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
         vsync: this,
       duration: Duration(seconds: 2)
     );
+    
+    _animationController.addStatusListener((status){
+      if(status == AnimationStatus.completed){
+        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => GifPage()));
+      }
+    });
   }
 
 

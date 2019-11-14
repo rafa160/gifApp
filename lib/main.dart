@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Get your Gifs',
       debugShowCheckedModeBanner: false,
-      home: GifPage(),
+      home: LoginScreen(),
       theme: ThemeData(hintColor: Colors.white),
     );
   }
