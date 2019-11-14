@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:give_me_gifs/screens/home/gif_page.dart';
+import 'package:give_me_gifs/screens/signup/signup_page.dart';
 
 class SignUpButton extends StatelessWidget {
   @override
@@ -7,7 +8,7 @@ class SignUpButton extends StatelessWidget {
     return FlatButton(
       padding: EdgeInsets.only(top: 150),
       onPressed: (){
-
+        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => SignUpPage()));
       },
       child: Text("Nao possui uma conta? Cadastre-se!",
       textAlign: TextAlign.center,
